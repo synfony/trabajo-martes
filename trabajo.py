@@ -5,18 +5,16 @@ total_recaudado=0
 cantidad_clientes=0
 clientes_con_regalo = 0
 while cliente != "fin":
-    cantidad_produtos=int(input( ))
+    cantidad_produtos=int(input( "Ingrese la cantidad del productos "))
     suma_precios=0
 
     for i in range(1,cantidad_produtos+1):
 
-        precio_unitario=int(input("Ingrese el valor del producto"))
-        ftotal_recaudado=0
-        cantidad_clientes=0
-        clientes_con_regalo = 0
+        precio_unitario=int(input(f"Ingrese el valor del producto {i}: "))
+
         suma_precios+=precio_unitario
 
-    if 5 <= cantidad_produtos  <10:
+    if  cantidad_produtos  >= 5 and cantidad_produtos <10:
         descuento=suma_precios*0.10
         total=suma_precios-descuento
         print(f"El valor de la compra de { cliente } es de {total}")
